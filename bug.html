@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML with an event listener
+    document.getElementById("myDiv").addEventListener("click", function() {
+      this.innerHTML = "<p>Text changed!</p><img src='broken-image.jpg' alt='broken image'>";
+    });
+  </script>
+</body>
+</html>
