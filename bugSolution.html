@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    //Correctly using textContent and appendChild to update the div content.
+    document.getElementById("myDiv").addEventListener("click", function() {
+      this.textContent = "Text changed!";
+      const img = document.createElement('img');
+      img.src = 'https://via.placeholder.com/150'; // Use a valid image source
+      img.alt = 'placeholder image';
+      this.appendChild(img);
+    });
+  </script>
+</body>
+</html>
